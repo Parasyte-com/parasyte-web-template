@@ -1,0 +1,19 @@
+/* styles/Features.css */
+.features {
+  padding: 4rem 2rem;
+  background: #000000;
+  color: #f9f9f9;
+  text-align: center;
+}
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.feature-card {
+  background: #2a2a2a;
+  padding: 2rem;
+  border-radius: 12px;
+}
+

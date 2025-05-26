@@ -1,0 +1,25 @@
+/* styles/Home.css */
+.home .hero {
+  text-align: center;
+  padding: 2rem 2rem;
+  background: black;
+  color: #f0f0f0;
+}
+
+.cta-button {
+  background: #00ffc8;
+  color: #111;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.cta-button:hover {
+  background: #00ddb3;
+}
+
+.down {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+}

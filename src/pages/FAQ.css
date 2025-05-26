@@ -1,0 +1,12 @@
+/* styles/FAQ.css */
+.faq {
+  max-width: 800px;
+  margin: auto;
+  padding: 4rem 2rem;
+}
+.faq-item {
+  margin-bottom: 2rem;
+}
+.faq-item h4 {
+  color: #00ffc8;
+}
