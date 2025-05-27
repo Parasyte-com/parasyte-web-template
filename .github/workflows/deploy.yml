@@ -1,4 +1,3 @@
-# .github/workflows/deploy.yml
 name: Deploy to S3
 
 on:
@@ -25,14 +24,17 @@ jobs:
       - name: Build Project
         run: npm run build
 
-      - name: Deploy to S3
-        uses: jakejarvis/s3-sync-action@v0.5.1
-        with:
-          args: --acl public-read --delete
+      - name: Install AWS CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y awscli
+
+      - name: Deploy to S3 using AWS CLI (verbose)
+        run: |
+          echo "Syncing to S3..."
+          aws s3 sync ./dist s3://${{ secrets.S3_BUCKET_NAME }} --delete --exact-timestamps --region us-east-1
         env:
-          AWS_S3_BUCKET: ${{ secrets.S3_BUCKET_NAME }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: ${{ secrets.AWS_REGION }}
-          SOURCE_DIR: ./dist
+          AWS_REGION: us-east-1
 

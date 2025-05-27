@@ -1,0 +1,1 @@
+export default function CrossPlatform() { return <h1>Cross-Platform Support</h1>; }
