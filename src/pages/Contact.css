@@ -7,6 +7,7 @@
 form {
   display: flex;
   flex-direction: column;
+  padding-top: 1rem;;
 }
 input, textarea {
   margin-bottom: 1rem;

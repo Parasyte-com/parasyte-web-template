@@ -5,15 +5,23 @@ import "./FAQ.css";
 const faqs = [
   {
     q: "Do I need a phone number?",
-    a: "Only for initial PIN registration. Your chats remain anonymous."
+    a: "Yes — only during secure PIN registration. Your identity stays private after."
   },
   {
     q: "Is it end-to-end encrypted?",
-    a: "Yes. Messages are encrypted on-device and decrypted only by the recipient."
+    a: "Yes — all data is encrypted on-device, and only the recipient can decrypt it."
   },
   {
     q: "Can I use Parasyte offline?",
-    a: "You can compose messages offline, but they’ll send when back online."
+    a: "Yes — compose messages or record voicemails offline. They’ll send once online"
+  },
+  {
+    q: "Is facial recognition required?",
+    a: "For chat and call access, yes — as part of our biometric privacy layer."
+  },
+  {
+    q: "Can I make calls or send voice messages?",
+    a: "Absolutely. Voice calls and one-time-play voicemails are fully supported."
   },
 ];
 

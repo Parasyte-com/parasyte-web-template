@@ -1,6 +1,6 @@
 /* styles/About.css */
 .about {
-  max-width: 800px;
+  max-width: 1500px;
   margin: auto;
   padding: 4rem 2rem;
   line-height: 1.7;
@@ -12,4 +12,12 @@
 .about ul {
   list-style: square;
   margin-left: 1.5rem;
+}
+
+.about p {
+  text-align: justify;
+  white-space: normal;
+  padding-top: 1rem;
+  align-self: center;
+  justify-content: center;
 }

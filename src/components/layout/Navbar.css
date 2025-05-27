@@ -16,6 +16,11 @@
   text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.5); 
 } */
 
+.navbar__logo img {
+  width: 500px;
+  margin-top: 3em;
+}
+
 .navbar__links {
   display: flex;
   justify-content: space-evenly;
