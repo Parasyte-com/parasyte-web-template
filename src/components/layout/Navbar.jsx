@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/parasyte-head.png';
-import './navbar.css';
+import './Navbar.css';
 
 const Navbar = () => (
   <nav className='navbar'>
