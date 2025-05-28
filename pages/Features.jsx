@@ -1,1 +1,0 @@
-export default function Features() { return <h1>Core Features Overview</h1>; }

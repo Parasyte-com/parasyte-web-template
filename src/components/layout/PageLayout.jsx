@@ -1,4 +1,8 @@
 import { motion } from 'framer-motion';
+import Sidebar from './Sidebar';
+import Navbar from './Navbar';
+import Footer from './Footer';
+import './PageLayout.css';
 
 const pageVariants = {
   initial: { opacity: 0, y: 30 },
@@ -14,14 +18,21 @@ const pageTransition = {
 
 export default function PageLayout({ children }) {
   return (
-    <motion.div
-      initial="initial"
-      animate="in"
-      exit="out"
-      variants={pageVariants}
-      transition={pageTransition}
-    >
-      {children}
-    </motion.div>
+    <div className="page-wrapper">
+      <Sidebar />
+      <div className="main-content">
+        <Navbar />
+        <motion.main
+          initial="initial"
+          animate="in"
+          exit="out"
+          variants={pageVariants}
+          transition={pageTransition}
+        >
+          {children}
+        </motion.main>
+        <Footer />
+      </div>
+    </div>
   );
 }
