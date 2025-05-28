@@ -1,0 +1,1 @@
+export default function MessagingPage() { return <h1>Secure Messaging Interface</h1>; }

@@ -1,0 +1,1 @@
+export default function P2P() { return <h1>Peer-to-Peer Communication</h1>; }

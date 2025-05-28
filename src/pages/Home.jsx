@@ -1,8 +1,6 @@
 // src/pages/Home.jsx
 import React from "react";
 import "./Home.css";
-import { Link } from 'react-router-dom';
-
 
 const Home = () => (
   <section className="home">
@@ -17,11 +15,9 @@ With a built-in facial-auth PIN, disappearing chats, encrypted voice calls, and 
       </p>
     </div>
     <div className="down">
-      
-      <Link to="/features">
-  <button className="cta-button">Explore Features</button>
-</Link>
-
+      <a href="/features" className="cta-button">
+        Explore Features
+      </a>
     </div>
   </section>
 );

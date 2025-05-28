@@ -1,0 +1,1 @@
+export default function Messaging() { return <h1>PIN-Based Messaging</h1>; }

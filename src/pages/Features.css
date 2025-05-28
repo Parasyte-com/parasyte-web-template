@@ -1,27 +1,21 @@
+/* styles/Features.css */
+.features {
+  max-width: 1500px;
+  margin: auto;
+  padding: 4rem 2rem;
+  background: #000000;
+  color: #f9f9f9;
+  text-align: center;
+}
 .feature-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
-
-  /* Responsive grid layout */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-
-@media (min-width: 1024px) {
-  .feature-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 .feature-card {
   background: #2a2a2a;
   padding: 2rem;
   border-radius: 12px;
-  text-align: left;
-  transition: transform 0.2s ease;
 }
 
-.feature-card:hover {
-  transform: translateY(-5px);
-  background: #333;
-}
