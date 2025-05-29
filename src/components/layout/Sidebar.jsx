@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import {
   FaWifi,
@@ -22,30 +22,46 @@ const navItems = [
 
 export default function Sidebar() {
   const [expanded, setExpanded] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const toggleSidebar = () => {
+    setExpanded(prev => !prev);
+  };
 
   return (
-    <div
-      className={`sidebar ${expanded ? 'expanded' : ''}`}
-      onMouseEnter={() => setExpanded(true)}
-      onMouseLeave={() => setExpanded(false)}
-    >
+    <>
+      <div
+        className={`sidebar ${expanded ? 'expanded' : ''}`}
+        onMouseEnter={!isMobile ? () => setExpanded(true) : undefined}
+        onMouseLeave={!isMobile ? () => setExpanded(false) : undefined}
+      >
+        {navItems.map(item => (
+          <NavLink
+            key={item.path}
+            to={item.path}
+            className="sidebar-link"
+            onClick={() => isMobile && setExpanded(false)} // hide after click on mobile
+          >
+            <div className="icon" title={item.name}>{item.icon}</div>
+            {expanded && <div className="label">{item.name}</div>}
+          </NavLink>
+        ))}
+      </div>
+
+      {/* Hamburger visible on all screen sizes */}
       <button
         className="toggle-btn"
-        onClick={() => setExpanded(prev => !prev)}
+        onClick={toggleSidebar}
+        aria-label="Toggle Sidebar"
       >
         <FaBars />
       </button>
-
-      {navItems.map(item => (
-        <NavLink
-          key={item.path}
-          to={item.path}
-          className="sidebar-link"
-        >
-          <div className="icon" title={item.name}>{item.icon}</div>
-          {expanded && <div className="label">{item.name}</div>}
-        </NavLink>
-      ))}
-    </div>
+    </>
   );
 }

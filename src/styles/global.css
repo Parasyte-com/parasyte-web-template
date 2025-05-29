@@ -73,6 +73,14 @@ img {
   }
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+
 /* button {
   padding: 12px 24px;
   border-radius: 8px;
