@@ -36,6 +36,14 @@ export default function Sidebar() {
 
   return (
     <>
+      <button
+        className="toggle-btn"
+        onClick={toggleSidebar}
+        aria-label="Toggle Sidebar"
+      >
+        <FaBars />
+      </button>
+
       <div
         className={`sidebar ${expanded ? 'expanded' : ''}`}
         onMouseEnter={!isMobile ? () => setExpanded(true) : undefined}
@@ -46,22 +54,13 @@ export default function Sidebar() {
             key={item.path}
             to={item.path}
             className="sidebar-link"
-            onClick={() => isMobile && setExpanded(false)} // hide after click on mobile
+            onClick={() => isMobile && setExpanded(false)} // close on mobile after click
           >
             <div className="icon" title={item.name}>{item.icon}</div>
-            {expanded && <div className="label">{item.name}</div>}
+            <div className="label">{item.name}</div>
           </NavLink>
         ))}
       </div>
-
-      {/* Hamburger visible on all screen sizes */}
-      <button
-        className="toggle-btn"
-        onClick={toggleSidebar}
-        aria-label="Toggle Sidebar"
-      >
-        <FaBars />
-      </button>
     </>
   );
 }

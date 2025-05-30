@@ -7,7 +7,7 @@
 form {
   display: flex;
   flex-direction: column;
-  padding-top: 1rem;
+  padding-top: 1rem;;
 }
 input, textarea {
   margin-bottom: 1rem;
@@ -29,3 +29,12 @@ button:hover {
   background: #00ddb3;
 }
 
+.contact-page {
+  padding-left: 0 !important; /* override sidebar layout if it added space */
+  margin-left: 0 !important;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 1;
+}
