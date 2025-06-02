@@ -13,8 +13,8 @@ import './Sidebar.css';
 
 const navItems = [
   { name: 'Messaging', path: '/features/messaging', icon: <FaCommentDots /> },
-  { name: 'Monitoring', path: '/monitoring', icon: <FaChartBar /> },
-  { name: 'Management', path: '/management', icon: <FaCogs /> },
+  { name: 'Monitoring', path: '/features/monitoring', icon: <FaChartBar /> },
+  { name: 'Management', path: '/features/management', icon: <FaCogs /> },
   { name: 'P2P', path: '/features/p2p', icon: <FaProjectDiagram /> },
   { name: 'Security', path: '/features/security', icon: <FaLock /> },
   { name: 'Cross-Platform', path: '/features/cross-platform', icon: <FaWifi /> },

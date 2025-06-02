@@ -1,1 +1,0 @@
-export default function Management() { return <h1>PIN & User Management System</h1>; }

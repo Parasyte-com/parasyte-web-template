@@ -1,1 +1,0 @@
-export default function Monitoring() { return <h1>System Monitoring (Prometheus + Grafana)</h1>; }

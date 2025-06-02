@@ -1,1 +1,0 @@
-export default function Security() { return <h1>Security First</h1>; }
